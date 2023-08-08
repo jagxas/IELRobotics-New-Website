@@ -28,7 +28,8 @@
 }
 
 .redirect-button {
-    background-color: rgb(255, 233, 87);
+    /* background-color: rgb(255, 233, 87); */
+    background-color: rgb(6, 125, 0);
     margin-top: 20px;
     padding: 10px 20px 10px 20px;
     color: rgb(49, 49, 49);
