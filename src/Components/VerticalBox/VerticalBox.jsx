@@ -25,7 +25,7 @@ export const VerticalBox = (Props) => {
                 
             <h1 className='vertical-box-title' id={`vertical-${idArray[type]}`}> {getTranslation(boxTitle)} </h1>
             
-            <div className="vertical-text-content">
+            <div className="vertical-text-content" style={{ paddingRight: "20px", paddingLeft: "20px" }}>
                 {getTranslation(boxContent)}
                 <button className="vertical-redirect-button">
                     <a draggable="true"
