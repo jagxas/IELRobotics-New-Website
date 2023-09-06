@@ -37,7 +37,7 @@ export const ContentBox = (Props) => {
         return (
         <div className="content-holder-yellow">
             <div className="image-container">
-                <img src={imageAdress} className="image" alt='content-img'/>
+                <img src={imageAdress} className="image" alt='content-img' loading='lazy'/>
             </div>
             <div className="text-content">
                 <h1 className='content-box-title'> {getTranslation(boxTitle)} </h1>
@@ -78,7 +78,7 @@ export const ContentBox = (Props) => {
                 </button>
             </div>
             <div className="image-container">
-                <img src={imageAdress} className="image" alt='content-img'/>
+                <img src={imageAdress} className="image" alt='content-img' loading='lazy'/>
             </div>
         </div>
     )

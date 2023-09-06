@@ -22,7 +22,7 @@ export const RedirectBox = (Props) => {
             // <a onClick={() => navigate(`/achievements?scrollToComponentId=${link}`)} rel="noopener noreferrer">
             <Link to={`/achievements?scrollToComponentId=${link}`} rel="noopener noreferrer">
             <div className='redirect-box-container'>
-                <img className='redirect-image' src={imgSrc} alt="Redirect Image" />
+                <img className='redirect-image' src={imgSrc} alt="Redirect Image" loading='lazy'/>
                 <p className='redirect-image-text'>{titleSecond}</p>
                 <div className='redirect-text'>
                     {titleFirst}
@@ -36,7 +36,7 @@ export const RedirectBox = (Props) => {
         return (
             <a href={link} target='_blank' rel="noopener noreferrer">
             <div className='redirect-box-container'>
-                <img className='redirect-image' src={imgSrc} alt="Redirect Image" />
+                <img className='redirect-image' src={imgSrc} alt="Redirect Image" loading='lazy'/>
                 <p className='redirect-image-text'>{titleSecond}</p>
                 <div className='redirect-text'>
                     {titleFirst}
