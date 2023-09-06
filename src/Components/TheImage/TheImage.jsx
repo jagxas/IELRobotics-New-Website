@@ -20,6 +20,7 @@ export const TheImage = (props) => {
                     src={imageLoaded ? props.source : placeholder} 
                     alt="" 
                     onLoad={handleImageLoad}
+                    loading='lazy'
                 />
             </div>
         </div>

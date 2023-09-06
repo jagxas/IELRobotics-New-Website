@@ -9,6 +9,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import placeholder from '/OtherImages/Loading/load-t.webp'
+
 export const ContentBox = (Props) => {
     const imageAdress = Props.image;
     const boxTitle = Props.title;
@@ -27,17 +29,17 @@ export const ContentBox = (Props) => {
         }, 0);
     };
 
-    const handleClick = (loc) => {
-        handleNavigation();
-        navigate(loc);
-        closeAfterUsed();
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    const handleImageLoad = () => {
+      setImageLoaded(true);
     };
 
     if(type === 0){
         return (
         <div className="content-holder-yellow">
             <div className="image-container">
-                <img src={imageAdress} className="image" alt='content-img'/>
+                <img src={imageLoaded ? imageAdress : placeholder} onLoad={handleImageLoad} className="image" alt='content-img' loading='lazy'/>
             </div>
             <div className="text-content">
                 <h1 className='content-box-title'> {getTranslation(boxTitle)} </h1>
@@ -78,7 +80,7 @@ export const ContentBox = (Props) => {
                 </button>
             </div>
             <div className="image-container">
-                <img src={imageAdress} className="image" alt='content-img'/>
+                <img src={imageAdress} className="image" alt='content-img' loading='lazy'/>
             </div>
         </div>
     )
