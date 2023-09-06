@@ -6,6 +6,10 @@ import LanguageContext from '../../Context/LanguageContext';
 export const VerticalBox = (Props) => {
     const imageAdress = Props.image1;
     const imageAdress2 = Props.image2;
+
+    const imageM1 = Props.imageM1;
+    const imageM2 = Props.imageM2;
+
     const boxTitle = Props.title;
     const boxContent = Props.content;
     const link = Props.link;
@@ -18,8 +22,8 @@ export const VerticalBox = (Props) => {
     return (
         <div className="vertical-holder">
             <div className="vertical-image-container">
-                <img src={imageAdress2} className='vertical-image-front' alt='verticalimg' loading='lazy'/>
-                <img src={imageAdress} className="vertical-image-back" alt='verticalimg' loading='lazy'/>
+                <img src={window.innerWidth > 500 ? imageAdress2 : imageM2} className='vertical-image-front' alt='verticalimg' loading='lazy'/>
+                <img src={window.innerWidth > 500 ? imageAdress : imageM1} className="vertical-image-back" alt='verticalimg' loading='lazy'/>
             </div>
                 
                 

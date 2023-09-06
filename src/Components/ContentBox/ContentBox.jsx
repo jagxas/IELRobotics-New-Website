@@ -15,6 +15,8 @@ export const ContentBox = (Props) => {
     const boxContent = Props.content;
     const link = Props.link;
 
+    const mobileImg = Props.simg;
+
     const type = Props.type;
 
     const { language, getTranslation } = useContext(LanguageContext);
@@ -37,8 +39,8 @@ export const ContentBox = (Props) => {
         return (
         <div className="content-holder-yellow">
             <div className="image-container">
-                <img src={imageAdress} className="image" alt='content-img' loading='lazy'/>
-            </div>
+                <img src={window.innerWidth > 500 ? imageAdress : mobileImg} className="image" alt='content-img' loading='lazy'/>
+            </div>            
             <div className="text-content">
                 <h1 className='content-box-title'> {getTranslation(boxTitle)} </h1>
                 {getTranslation(boxContent)}
@@ -78,7 +80,7 @@ export const ContentBox = (Props) => {
                 </button>
             </div>
             <div className="image-container">
-                <img src={imageAdress} className="image" alt='content-img' loading='lazy'/>
+                <img src={window.innerWidth > 500 ? imageAdress : mobileImg}  className="image" alt='content-img' loading='lazy'/>
             </div>
         </div>
     )

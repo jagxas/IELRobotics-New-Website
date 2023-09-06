@@ -10,6 +10,9 @@ import { Helmet } from 'react-helmet-async';
 import LanguageContext from "../../Context/LanguageContext"
 
 import home_image from "/OtherImages/HomeImages/8058s.webp"
+import homeDesktop from "/OtherImages/HomeImages/8058D.webp"
+import homeMobile from "/OtherImages/HomeImages/8058M.webp"
+
 import logo from '/OtherImages/HomeImages/logos.webp'
 import iel from '/OtherImages/HomeImages/iellogos.webp'
 import award1 from '/OtherImages/HomeImages/award1s.webp'
@@ -18,6 +21,10 @@ import award3 from '/OtherImages/HomeImages/award3s.webp'
 import sponsor from '/OtherImages/HomeImages/sponsor-images.webp'
 import team from '/OtherImages/HomeImages/teams.webp'
 import { useNavigate, Link } from "react-router-dom";
+
+import rep_image from '/OtherImages/Loading/load-pfp.webp'
+import dortyuz from '/OtherImages/Loading/400.png'
+import seksyuz from '/OtherImages/Loading/800.png'
 
 //import { scrollToComponent } from '../Achievements/Achievements.jsx'
 
@@ -63,12 +70,12 @@ export const Home = () => {
                 <meta charset="UTF-8"/>
                 <meta name="author" content="contact@ielrobotics.org"/>
             </Helmet>
-            <TheImage source={home_image} text={getTranslation("home-slogan")}/>
+            <TheImage source={homeDesktop} mobile={homeMobile} text={getTranslation("home-slogan")}/>
             <div className='team-title-holder'>
                 <h1 className='team-title'> #FAQ </h1>
             </div>
-            <ContentBox image={logo} title={"home-content-title-1"} content={"home-content-content-1-short"} type={0} link={"/team"} key={isPortrait ? 'portrait' : 'landscape'} ori={isPortrait ? 0 : 1}/>
-            <ContentBox image={iel} title={"home-content-title-2"} content={"home-content-content-2-short"} type={1} link={returnIELLink()} key={isPortrait ? 'portrait2' : 'landscape2'}/>
+            <ContentBox image={logo} simg={logo} title={"home-content-title-1"} content={"home-content-content-1-short"} type={0} link={"/team"} key={isPortrait ? 'portrait' : 'landscape'} ori={isPortrait ? 0 : 1}/>
+            <ContentBox image={iel} simg={iel} title={"home-content-title-2"} content={"home-content-content-2-short"} type={1} link={returnIELLink()} key={isPortrait ? 'portrait2' : 'landscape2'}/>
             <div className='team-title-holder'>
                 <h1 className='team-title'> {getTranslation("home-section-news") } </h1>
             </div>
@@ -77,10 +84,10 @@ export const Home = () => {
                 <h1 className='team-title'> {getTranslation("home-section-competetions") } </h1>
             </div>
             <div className="home-comp-holder">
-                <VerticalBox image1={"/OtherImages/HomeImages/frcback2.webp"} image2={"/OtherImages/HomeImages/first-logo-vector.svg"} title={"FRC"} content={"home-competetion-frc"} type={0} link={"https://www.firstinspires.org/robotics/frc"} />
-                <VerticalBox image1={"/OtherImages/AchiImages/JF23/jf230.webp"} image2={"/OtherImages/HomeImages/jf-logo-vector.svg"} title={"JugendForscht"} content={"home-competetion-jf"} type={1} link={"https://www.jugend-forscht.de/"} />
-                <VerticalBox image1={"/OtherImages/AchiImages/TF22/tf221.webp"} title={"Teknofest"} image2={"/OtherImages/HomeImages/tflogo.webp"} content={"home-competetion-tekno"} type={2} link={"https://www.teknofest.org/tr/"}  />
-                <VerticalBox image1={"/OtherImages/HomeImages/urfaback.webp"} title={"home-competetion-other-title"} image2={"/OtherImages/HomeImages/other-logos.webp"} content={"home-competetion-other"} type={3} link={"https://www.firstinspires.org/robotics/frc"} />
+                <VerticalBox image1={"/OtherImages/HomeImages/frcback2.webp"} image2={"/OtherImages/HomeImages/first-logo-vector.svg"} imageM1={"/OtherImages/HomeImages/frcbackM.webp"} imageM2={"/OtherImages/HomeImages/first-logo-vector.svg"} title={"FRC"} content={"home-competetion-frc"} type={0} link={"https://www.firstinspires.org/robotics/frc"} />
+                <VerticalBox image1={"/OtherImages/AchiImages/JF23/jf230.webp"} image2={"/OtherImages/HomeImages/jf-logo-vector.svg"} imageM1={"/OtherImages/AchiImages/JF23/jf230.webp"} imageM2={"/OtherImages/HomeImages/jf-logo-vector.svg"} title={"JugendForscht"} content={"home-competetion-jf"} type={1} link={"https://www.jugend-forscht.de/"} />
+                <VerticalBox image1={"/OtherImages/AchiImages/TF22/tf221.webp"} image2={"/OtherImages/HomeImages/tflogo.webp"} imageM1={"/OtherImages/AchiImages/TF22/tf221.webp"} imageM2={"/OtherImages/HomeImages/tfM.webp"} title={"Teknofest"}  content={"home-competetion-tekno"} type={2} link={"https://www.teknofest.org/tr/"}  />
+                <VerticalBox image1={"/OtherImages/HomeImages/urfaback.webp"} image2={"/OtherImages/HomeImages/other-logos.webp"} imageM1={"/OtherImages/HomeImages/urfaback.webp"} imageM2={"/OtherImages/HomeImages/other-logos.webp"}  title={"home-competetion-other-title"}  content={"home-competetion-other"} type={3} link={"https://www.firstinspires.org/robotics/frc"} />
 
             </div>
 
@@ -96,11 +103,11 @@ export const Home = () => {
             <div className='team-title-holder'>
                 <h1 className='team-title'> {getTranslation("home-section-partners") } </h1>
             </div>
-            <ContentBox image={sponsor} title={"home-sponsor-title"} content={"home-sponsor-content"} type={0} link={"/sponsors"} key={isPortrait ? 'portrait3' : 'landscape3'}/>
+            <ContentBox image={sponsor} simg={sponsor} title={"home-sponsor-title"} content={"home-sponsor-content"} type={0} link={"/sponsors"} key={isPortrait ? 'portrait3' : 'landscape3'}/>
             <div className='team-title-holder'>
                 <h1 className='team-title'> {getTranslation("home-section-team") } </h1>
             </div>
-            <ContentBox image={team} title={"home-team-title"} content={"home-team-content"} type={1} link={"/team"} key={isPortrait ? 'portrait4' : 'landscape4'}/>
+            <ContentBox image={team} simg={team} title={"home-team-title"} content={"home-team-content"} type={1} link={"/team"} key={isPortrait ? 'portrait4' : 'landscape4'}/>
         </div>
 
     )

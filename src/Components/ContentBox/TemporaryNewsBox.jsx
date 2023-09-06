@@ -38,16 +38,16 @@ export const TemporaryNewsBox = () => {
                     className="slidertemp"
                 >
                     <div>
-                        <img src={"/OtherImages/Loading/oda4.webp"} className="image" id="newsimage" alt="News" />
+                        <img src={window.innerWidth > 500 ?"/OtherImages/Loading/oda4.webp" : "/OtherImages/Loading/oda4M.webp"} className="image" id="newsimage" alt="News" />
                     </div>
                     <div>
-                        <img src={"/OtherImages/Loading/oda1.webp"} className="image" id="newsimage" alt="News" />
+                        <img src={window.innerWidth > 500 ?"/OtherImages/Loading/oda1.webp" : "/OtherImages/Loading/oda1M.webp"} className="image" id="newsimage" alt="News" />
                     </div>
                     <div>
-                        <img src={"/OtherImages/Loading/oda2.webp"} className="image" id="newsimage" alt="News" />
+                        <img src={window.innerWidth > 500 ?"/OtherImages/Loading/oda2.webp" : "/OtherImages/Loading/oda2M.webp"} className="image" id="newsimage" alt="News" />
                     </div>
                     <div>
-                        <img src={"/OtherImages/Loading/oda3.webp"} className="image" id="newsimage" alt="News" />
+                        <img src={window.innerWidth > 500 ?"/OtherImages/Loading/oda3.webp" : "/OtherImages/Loading/oda3M.webp"} className="image" id="newsimage" alt="News" />
                     </div>
 
                 </Carousel>
