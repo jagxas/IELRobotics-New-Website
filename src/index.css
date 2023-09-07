@@ -2,7 +2,7 @@
 /* @tailwind base;
 @tailwind utilities; */
 
-@font-face {
+/* @font-face {
     font-family: 'Poppins';
     src: url('/Docs/Poppins-ExtraBold.ttf') format('truetype'), local('Segoe UI');
     font-weight: 800;
@@ -22,7 +22,7 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-}
+} */
 @font-face {
     font-family: 'Poppins';
     src: url('/Docs/Poppins-Light.ttf') format('truetype'), local('Segoe UI');
