@@ -63,7 +63,7 @@ export const Home = () => {
                 <meta charset="UTF-8"/>
                 <meta name="author" content="contact@ielrobotics.org"/>
             </Helmet>
-            <TheImage source={loadimg} text={getTranslation("home-slogan")}/>
+            <TheImage source={home_image} text={getTranslation("home-slogan")}/>
             <div className='team-title-holder'>
                 <h1 className='team-title'> #FAQ </h1>
             </div>
