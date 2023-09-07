@@ -146,7 +146,7 @@ a:hover {
     .list-item a {
         font-size: 1.02vw;
         letter-spacing: 0.075vw;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     #language-toggle-icon {
