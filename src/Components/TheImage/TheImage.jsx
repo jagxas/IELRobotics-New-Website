@@ -17,7 +17,7 @@ export const TheImage = (props) => {
             <div className="image-wrapper">
                 <p> {props.text} </p>
                 <img 
-                    src={imageLoaded ? (window.innerWidth > 500 ? props.source : props.mobile) : placeholder} 
+                    src={imageLoaded ? props.source : placeholder} 
                     alt="" 
                     onLoad={handleImageLoad}
                 />
