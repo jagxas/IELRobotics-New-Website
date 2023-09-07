@@ -67,8 +67,8 @@ export const Home = () => {
             <div className='team-title-holder'>
                 <h1 className='team-title'> #FAQ </h1>
             </div>
-            <ContentBox image={loadimg} title={"home-content-title-1"} content={"home-content-content-1-short"} type={0} link={"/team"} key={isPortrait ? 'portrait' : 'landscape'} ori={isPortrait ? 0 : 1}/>
-            <ContentBox image={loadimg} title={"home-content-title-2"} content={"home-content-content-2-short"} type={1} link={returnIELLink()} key={isPortrait ? 'portrait2' : 'landscape2'}/>
+            <ContentBox image={logo} title={"home-content-title-1"} content={"home-content-content-1-short"} type={0} link={"/team"} key={isPortrait ? 'portrait' : 'landscape'} ori={isPortrait ? 0 : 1}/>
+            <ContentBox image={iel} title={"home-content-title-2"} content={"home-content-content-2-short"} type={1} link={returnIELLink()} key={isPortrait ? 'portrait2' : 'landscape2'}/>
             <div className='team-title-holder'>
                 <h1 className='team-title'> {getTranslation("home-section-news") } </h1>
             </div>
@@ -77,10 +77,10 @@ export const Home = () => {
                 <h1 className='team-title'> {getTranslation("home-section-competetions") } </h1>
             </div>
             <div className="home-comp-holder">
-                <VerticalBox image1={loadimg} image2={loadimg} title={"FRC"} content={"home-competetion-frc"} type={0} link={"https://www.firstinspires.org/robotics/frc"} />
-                <VerticalBox image1={loadimg} image2={loadimg} title={"JugendForscht"} content={"home-competetion-jf"} type={1} link={"https://www.jugend-forscht.de/"} />
-                <VerticalBox image1={loadimg} title={"Teknofest"} image2={loadimg} content={"home-competetion-tekno"} type={2} link={"https://www.teknofest.org/tr/"}  />
-                <VerticalBox image1={loadimg} title={"home-competetion-other-title"} image2={loadimg} content={"home-competetion-other"} type={3} link={"https://www.firstinspires.org/robotics/frc"} />
+                <VerticalBox image1={"/OtherImages/HomeImages/frcback2.webp"} image2={"/OtherImages/HomeImages/first-logo-vector.svg"} title={"FRC"} content={"home-competetion-frc"} type={0} link={"https://www.firstinspires.org/robotics/frc"} />
+                <VerticalBox image1={"/OtherImages/AchiImages/JF23/jf230.webp"} image2={"/OtherImages/HomeImages/jf-logo-vector.svg"} title={"JugendForscht"} content={"home-competetion-jf"} type={1} link={"https://www.jugend-forscht.de/"} />
+                <VerticalBox image1={"/OtherImages/AchiImages/TF22/tf221.webp"} title={"Teknofest"} image2={"/OtherImages/HomeImages/tflogo.webp"} content={"home-competetion-tekno"} type={2} link={"https://www.teknofest.org/tr/"}  />
+                <VerticalBox image1={"/OtherImages/HomeImages/urfaback.webp"} title={"home-competetion-other-title"} image2={"/OtherImages/HomeImages/other-logos.webp"} content={"home-competetion-other"} type={3} link={"https://www.firstinspires.org/robotics/frc"} />
 
             </div>
 
@@ -89,18 +89,18 @@ export const Home = () => {
             </div>
             {/* <ContentBox image={frc} title={"home-awards-title"} content={"home-awards-1"} type={1} /> */}
             <div className="temp-holder">
-                <RedirectBox img={loadimg} title1={"Bosphorus 2022"} title2={"Winner"} link={"componentId4"}/>
-                <RedirectBox img={loadimg} title1={"JF Biology 2023"} title2={"1st Place"} link={"componentId0"}/>
-                <RedirectBox img={loadimg} title1={"Izmir 2021"} title2={"Winner"} link={"componentId8"}/>
+                <RedirectBox img={award1} title1={"Bosphorus 2022"} title2={"Winner"} link={"componentId4"}/>
+                <RedirectBox img={award3} title1={"JF Biology 2023"} title2={"1st Place"} link={"componentId0"}/>
+                <RedirectBox img={award2} title1={"Izmir 2021"} title2={"Winner"} link={"componentId8"}/>
             </div>
             <div className='team-title-holder'>
                 <h1 className='team-title'> {getTranslation("home-section-partners") } </h1>
             </div>
-            <ContentBox image={loadimg} title={"home-sponsor-title"} content={"home-sponsor-content"} type={0} link={"/sponsors"} key={isPortrait ? 'portrait3' : 'landscape3'}/>
+            <ContentBox image={sponsor} title={"home-sponsor-title"} content={"home-sponsor-content"} type={0} link={"/sponsors"} key={isPortrait ? 'portrait3' : 'landscape3'}/>
             <div className='team-title-holder'>
                 <h1 className='team-title'> {getTranslation("home-section-team") } </h1>
             </div>
-            <ContentBox image={loadimg} title={"home-team-title"} content={"home-team-content"} type={1} link={"/team"} key={isPortrait ? 'portrait4' : 'landscape4'}/>
+            <ContentBox image={team} title={"home-team-title"} content={"home-team-content"} type={1} link={"/team"} key={isPortrait ? 'portrait4' : 'landscape4'}/>
         </div>
 
     )
