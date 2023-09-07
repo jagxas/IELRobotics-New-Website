@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet-async';
 import LanguageContext from "../../Context/LanguageContext"
 
 import home_image from "/OtherImages/HomeImages/8058s.webp"
+import loadimg from "/OtherImages/Loading/load-main.webp"
 import logo from '/OtherImages/HomeImages/logos.webp'
 import iel from '/OtherImages/HomeImages/iellogos.webp'
 import award1 from '/OtherImages/HomeImages/award1s.webp'
@@ -56,13 +57,13 @@ export const Home = () => {
                 <title> {getTranslation("helmet-home")}</title>
                 <meta name="description" content="Take a look at the renewed website of IEL Robotics #8058.
                 We are a student club dedicated to creating new innovations and compete at the highest level."/>
-                <link rel="canonical" href="https://www.ielrobotics.org"/>
+                <link rel="canonical" href="https://www.ielrobotics.org/"/>
                 <meta name="robots" content="index, follow"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta charset="UTF-8"/>
                 <meta name="author" content="contact@ielrobotics.org"/>
             </Helmet>
-            <TheImage source={home_image} text={getTranslation("home-slogan")}/>
+            <TheImage source={loadimg} text={getTranslation("home-slogan")}/>
             <div className='team-title-holder'>
                 <h1 className='team-title'> #FAQ </h1>
             </div>
