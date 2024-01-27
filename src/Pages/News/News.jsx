@@ -6,6 +6,7 @@ import '../News/News.css'
 import { Helmet } from 'react-helmet-async';
 import { TheImage } from "../../Components/TheImage/TheImage";
 import { SmallBox } from "../../Components/SmallBox/SmallBox";
+import { BlogBox } from "../../Components/BlogBox/BlogBox";
 import LanguageContext from "../../Context/LanguageContext"
 
 import fillerImg from "/OtherImages/Loading/load-pfp.webp"
@@ -61,6 +62,17 @@ export const News = () => {
                         <SmallBox key={mem.id} image={fillerImg} name={mem.name} role={"Empty"} link={"Empty"} idval={mem.id}>  </SmallBox>
                     )
                 })}
+            </div>
+            <div className="blog-wrapper">
+                <BlogBox image={fillerImg} boxtitle={"Sample Titel"}/>
+                <BlogBox image={fillerImg} boxtitle={"Sample Titel"}/>
+                <BlogBox image={fillerImg} boxtitle={"Sample Titel"}/>
+                <BlogBox image={fillerImg} boxtitle={"Sample Titel"}/>
+                <BlogBox image={fillerImg} boxtitle={"Sample Titel"}/>
+                <BlogBox image={fillerImg} boxtitle={"Sample Titel"}/>
+                <BlogBox image={fillerImg} boxtitle={"Sample Titel"}/>
+                <BlogBox image={fillerImg} boxtitle={"Sample Titel"}/>
+                
             </div>
         </div>
         
